@@ -1,0 +1,1106 @@
+/* ========================================
+   CSS Variables for Theme Customization
+   ======================================== */
+:root {
+    --felt-color: #0d5e2a;
+    --felt-accent: #0a4721;
+    --table-border: #8b6914;
+    --chip-red: #dc143c;
+    --chip-blue: #1e90ff;
+    --chip-green: #228b22;
+    --chip-black: #1a1a1a;
+    --chip-white: #f5f5f5;
+    --card-back: #1e3a8a;
+    --card-back-pattern: #3b82f6;
+}
+
+/* Theme variations */
+body.theme-blue {
+    --felt-color: #1e3a8a;
+    --felt-accent: #1e40af;
+    --table-border: #cbd5e1;
+}
+
+body.theme-red {
+    --felt-color: #7f1d1d;
+    --felt-accent: #991b1b;
+    --table-border: #fbbf24;
+}
+
+/* ========================================
+   Global Styles
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* ========================================
+   Introduction Page Styles
+   ======================================== */
+.intro-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.intro-header {
+    text-align: center;
+    margin-bottom: 50px;
+    animation: fadeInDown 1s ease-out;
+}
+
+.project-title {
+    font-size: 3rem;
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #b0b0b0;
+    font-style: italic;
+}
+
+.info-card {
+    background: linear-gradient(145deg, #2a2a2a, #1f1f1f);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.card-header h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #ffd700;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #ffd700;
+    padding-bottom: 15px;
+}
+
+.info-section {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+}
+
+.info-section h3 {
+    color: #ffd700;
+    margin-bottom: 12px;
+    font-size: 1.3rem;
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.info-section p {
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+.team-list, .features-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.team-list li, .features-list li {
+    padding: 8px 0;
+    color: #e0e0e0;
+    border-left: 3px solid #ffd700;
+    padding-left: 15px;
+    margin-bottom: 8px;
+}
+
+.cta-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.enter-button {
+    display: inline-block;
+    padding: 18px 50px;
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.enter-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(255, 215, 0, 0.6);
+}
+
+.intro-footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #808080;
+    animation: fadeIn 2s ease-out;
+}
+
+.date {
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+/* ========================================
+   BlackJack Table View
+   ======================================== */
+.table-view {
+    background: linear-gradient(135deg, #1a1a1a 0%, #3a3a3a 100%);
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+}
+
+.nav-link {
+    color: #ffd700;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover {
+    transform: translateX(-5px);
+}
+
+.table-title {
+    color: #ffd700;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+
+.theme-switcher {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-label {
+    color: #b0b0b0;
+    margin-right: 5px;
+}
+
+.theme-option {
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.theme-option.classic {
+    color: #0d5e2a;
+}
+
+.theme-option.blue {
+    color: #1e3a8a;
+}
+
+.theme-option.red {
+    color: #7f1d1d;
+}
+
+.theme-option:hover {
+    transform: scale(1.3);
+}
+
+/* ========================================
+   Table Container - Main Game Area
+   ======================================== */
+.table-container {
+    width: 95%;
+    max-width: 1400px;
+    margin: 30px auto;
+    background: radial-gradient(ellipse at center, var(--felt-color) 0%, var(--felt-accent) 100%);
+    border: 15px solid var(--table-border);
+    border-radius: 200px;
+    padding: 60px 40px;
+    min-height: 700px;
+    position: relative;
+    box-shadow: 
+        inset 0 0 50px rgba(0, 0, 0, 0.5),
+        0 20px 60px rgba(0, 0, 0, 0.7);
+    /* 3D perspective for cards */
+    perspective: 1000px;
+}
+
+/* Table texture overlay */
+.table-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.03) 2px,
+        rgba(0, 0, 0, 0.03) 4px
+    );
+    border-radius: 185px;
+    pointer-events: none;
+}
+
+/* ========================================
+   Dealer Area
+   ======================================== */
+.dealer-area {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.dealer-label {
+    font-size: 1.5rem;
+    color: #ffd700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dealer-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* ========================================
+   Card Deck Area
+   ======================================== */
+.deck-area {
+    position: absolute;
+    top: 180px;
+    right: 80px;
+    text-align: center;
+}
+
+.deck {
+    position: relative;
+    width: 80px;
+    height: 112px;
+    margin-bottom: 10px;
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    animation: deckShuffle 4s ease-in-out 2.5s infinite;
+}
+
+/* Card back pattern on deck */
+.deck::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+}
+
+.deck::after {
+    content: '♠ ♥ ♣ ♦';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+}
+
+.deck-label-top {
+    color: #ffd700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
+}
+
+/* Burn card animation - STRETCH GOAL - happens first before dealing */
+.burn-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 112px;
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    animation: burnCardSlide 2s ease-out 0.5s forwards;
+    z-index: 10;
+}
+
+/* Burn card pattern */
+.burn-card::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+}
+
+.burn-card::after {
+    content: '♠ ♥ ♣ ♦';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+}
+
+@keyframes burnCardSlide {
+    0% {
+        transform: translate(0, 0) rotate(0deg);
+        opacity: 1;
+    }
+    30% {
+        transform: translate(80px, -80px) rotate(-25deg);
+        opacity: 1;
+    }
+    70% {
+        transform: translate(150px, -120px) rotate(-35deg);
+        opacity: 0.3;
+    }
+    100% {
+        transform: translate(200px, -150px) rotate(-45deg);
+        opacity: 0;
+    }
+}
+
+/* Shuffle animation on deck - CORE FEATURE - starts after burn card */
+@keyframes deckShuffle {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(2deg) scale(1.05);
+    }
+    50% {
+        transform: rotate(-2deg) scale(0.95);
+    }
+    75% {
+        transform: rotate(1deg) scale(1.02);
+    }
+}
+
+/* ========================================
+   Players Area
+   ======================================== */
+.players-area {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 80px;
+    flex-wrap: wrap;
+}
+
+.player-spot {
+    text-align: center;
+}
+
+.player-cards {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    min-height: 112px;
+}
+
+.player-label {
+    font-size: 1.2rem;
+    color: #ffd700;
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ========================================
+   Card Styles with 3D Perspective
+   ======================================== */
+.card {
+    width: 80px;
+    height: 112px;
+    position: relative;
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.card-front {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #333;
+    color: #000;
+}
+
+.card-value {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.card-suit {
+    font-size: 2.5rem;
+    color: #000;
+}
+
+.card-suit.spade, .card-suit.club {
+    color: #000;
+}
+
+.card-suit.heart, .card-suit.diamond {
+    color: #dc143c;
+}
+
+/* Make sure card values match suit colors for face cards */
+.card-front:has(.card-suit.heart) .card-value,
+.card-front:has(.card-suit.diamond) .card-value {
+    color: #dc143c;
+}
+
+.card-back {
+    background: linear-gradient(135deg, var(--card-back) 0%, var(--card-back-pattern) 100%);
+    border-radius: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Card backs in card-inner containers get rotated */
+.card-inner .card-back {
+    transform: rotateY(180deg);
+}
+
+/* Card back pattern */
+.card-back::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+}
+
+.card-back::after {
+    content: '♠ ♥ ♣ ♦';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+}
+
+/* 3D Perspective Effect - STRETCH GOAL */
+.card {
+    transform: rotateY(-5deg) rotateX(2deg);
+}
+
+/* Hover peek effect - STRETCH GOAL */
+.peek-card {
+    cursor: pointer;
+}
+
+.peek-card:hover {
+    transform: translateY(-15px) rotateY(-8deg) rotateX(5deg) rotateZ(-3deg) !important;
+    z-index: 100 !important;
+    transition: transform 0.3s ease, z-index 0s;
+}
+
+/* Flip card effect for dealer hole card - STRETCH GOAL */
+.flip-card {
+    cursor: pointer;
+}
+
+.flip-card .card-inner.flippable {
+    transform: rotateY(180deg);
+}
+
+.flip-card:hover .card-inner.flippable {
+    transform: rotateY(0deg) !important;
+    transition: transform 0.6s ease;
+}
+
+.flip-card:hover {
+    z-index: 100;
+}
+
+/* Deal sequence animations - CORE FEATURE 
+   Blackjack dealing order:
+   - Round 1 (face up): Player 1 → Player 2 → Player 3 → Dealer
+   - Round 2 (face up for players, face down for dealer): Player 1 → Player 2 → Player 3 → Dealer
+*/
+
+/* Round 1 - First card to each player (face up) */
+.player1-card-1 {
+    animation: dealToPlayer1Card1 1s ease-out 2.8s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.player2-card-1 {
+    animation: dealToPlayer2Card1 1s ease-out 3.2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.player3-card-1 {
+    animation: dealToPlayer3Card1 1s ease-out 3.6s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Dealer first card (face up) */
+.dealer-card-1 {
+    animation: dealToDealer1 1s ease-out 4.0s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Round 2 - Second card to each player (face up) */
+.player1-card-2 {
+    animation: dealToPlayer1Card2 1s ease-out 4.4s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.player2-card-2 {
+    animation: dealToPlayer2Card2 1s ease-out 4.8s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.player3-card-2 {
+    animation: dealToPlayer3Card2 1s ease-out 5.2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Dealer second card (face down - hole card) */
+.dealer-card-2 {
+    animation: dealToDealer2 1s ease-out 5.6s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+/* Deal animation keyframes - cards slide from deck position (right side) */
+@keyframes dealToDealer1 {
+    0% {
+        transform: translate(400px, 100px) rotateY(180deg) rotateZ(90deg) scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(200px, 50px) rotateY(90deg) rotateZ(45deg) scale(0.7);
+        opacity: 1;
+    }
+    99% {
+        transform: translate(0, 0) rotateY(0deg) rotateZ(0deg) scale(1);
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes dealToDealer2 {
+    0% {
+        transform: translate(400px, 100px) rotateY(0deg) rotateZ(90deg) scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(200px, 50px) rotateY(0deg) rotateZ(45deg) scale(0.7);
+        opacity: 1;
+    }
+    99% {
+        transform: translate(0, 0) rotateY(0deg) rotateZ(0deg) scale(1);
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes dealToPlayer1Card1 {
+    0% {
+        transform: translate(200px, -200px) rotateY(180deg) rotateZ(90deg) scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(100px, -100px) rotateY(90deg) rotateZ(45deg) scale(0.7);
+        opacity: 1;
+    }
+    99% {
+        transform: translate(0, 0) rotateY(0deg) rotateZ(0deg) scale(1);
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes dealToPlayer1Card2 {
+    0% {
+        transform: translate(200px, -200px) rotateY(180deg) rotateZ(90deg) scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(100px, -100px) rotateY(90deg) rotateZ(45deg) scale(0.7);
+        opacity: 1;
+    }
+    99% {
+        transform: translate(0, 0) rotateY(0deg) rotateZ(0deg) scale(1);
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes dealToPlayer2Card1 {
+    0% {
+        transform: translate(300px, -200px) rotateY(180deg) rotateZ(90deg) scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(150px, -100px) rotateY(90deg) rotateZ(45deg) scale(0.7);
+        opacity: 1;
+    }
+    99% {
+        transform: translate(0, 0) rotateY(0deg) rotateZ(0deg) scale(1);
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes dealToPlayer2Card2 {
+    0% {
+        transform: translate(300px, -200px) rotateY(180deg) rotateZ(90deg) scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(150px, -100px) rotateY(90deg) rotateZ(45deg) scale(0.7);
+        opacity: 1;
+    }
+    99% {
+        transform: translate(0, 0) rotateY(0deg) rotateZ(0deg) scale(1);
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes dealToPlayer3Card1 {
+    0% {
+        transform: translate(400px, -200px) rotateY(180deg) rotateZ(90deg) scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(200px, -100px) rotateY(90deg) rotateZ(45deg) scale(0.7);
+        opacity: 1;
+    }
+    99% {
+        transform: translate(0, 0) rotateY(0deg) rotateZ(0deg) scale(1);
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes dealToPlayer3Card2 {
+    0% {
+        transform: translate(400px, -200px) rotateY(180deg) rotateZ(90deg) scale(0.5);
+        opacity: 0;
+    }
+    50% {
+        transform: translate(200px, -100px) rotateY(90deg) rotateZ(45deg) scale(0.7);
+        opacity: 1;
+    }
+    99% {
+        transform: translate(0, 0) rotateY(0deg) rotateZ(0deg) scale(1);
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* ========================================
+   Betting Area & Chips
+   ======================================== */
+.bet-area {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 5px;
+    min-height: 50px;
+    position: relative;
+}
+
+.chip {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Chip colors using CSS variables - CORE FEATURE */
+.chip-red {
+    background: radial-gradient(circle at 30% 30%, var(--chip-red), #8b0000);
+}
+
+.chip-blue {
+    background: radial-gradient(circle at 30% 30%, var(--chip-blue), #104e8b);
+}
+
+.chip-green {
+    background: radial-gradient(circle at 30% 30%, var(--chip-green), #0f5e0f);
+}
+
+.chip-black {
+    background: radial-gradient(circle at 30% 30%, var(--chip-black), #000000);
+}
+
+.chip-white {
+    background: radial-gradient(circle at 30% 30%, var(--chip-white), #d3d3d3);
+}
+
+/* Chip inner ring */
+.chip::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 28px;
+    height: 28px;
+    border: 2px dashed rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+}
+
+/* Chip center dot */
+.chip::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8px;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+}
+
+/* Chip stacking */
+.chip-stacked {
+    position: absolute;
+    transform: translateY(-8px);
+}
+
+.chip-stacked-2 {
+    position: absolute;
+    transform: translateY(-16px);
+}
+
+/* Chip hover effect with glow - CORE FEATURE */
+.chip.hoverable {
+    cursor: pointer;
+}
+
+.chip.hoverable:hover {
+    transform: scale(1.2) translateY(-5px) !important;
+    box-shadow: 
+        0 8px 16px rgba(0, 0, 0, 0.6),
+        0 0 20px rgba(255, 215, 0, 0.6),
+        0 0 40px rgba(255, 215, 0, 0.4) !important;
+}
+
+/* ========================================
+   Chip Bank
+   ======================================== */
+.chip-bank {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}
+
+.bank-title {
+    text-align: center;
+    color: #ffd700;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.chip-stack {
+    display: flex;
+    gap: 12px;
+}
+
+/* ========================================
+   Controls Info
+   ======================================== */
+.controls-info {
+    text-align: center;
+    margin: 30px auto;
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    color: #b0b0b0;
+}
+
+.controls-info p {
+    margin: 8px 0;
+}
+
+.controls-info strong {
+    color: #ffd700;
+}
+
+/* ========================================
+   Animations for Introduction Page
+   ======================================== */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ========================================
+   Responsive Design
+   ======================================== */
+@media screen and (max-width: 1200px) {
+    .table-container {
+        border-radius: 150px;
+        padding: 40px 30px;
+    }
+    
+    .players-area {
+        gap: 40px;
+    }
+    
+    .deck-area {
+        right: 40px;
+        top: 160px;
+    }
+    
+    .chip-bank {
+        right: 20px;
+        bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .project-title {
+        font-size: 2rem;
+    }
+    
+    .info-card {
+        padding: 25px;
+    }
+    
+    .table-container {
+        border-radius: 100px;
+        padding: 30px 20px;
+        border-width: 10px;
+    }
+    
+    .top-nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .table-title {
+        font-size: 1.4rem;
+    }
+    
+    .players-area {
+        gap: 30px;
+        margin-top: 60px;
+    }
+    
+    .card {
+        width: 60px;
+        height: 84px;
+    }
+    
+    .chip {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .deck-area {
+        position: static;
+        transform: none;
+        margin: 20px auto;
+    }
+    
+    .chip-bank {
+        position: static;
+        margin: 20px auto;
+        width: fit-content;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .players-area {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .dealer-cards {
+        gap: 10px;
+    }
+    
+    .player-cards {
+        gap: 10px;
+    }
+}
+
+/* ========================================
+   Accessibility - Reduced Motion
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .chip.hoverable:hover {
+        transform: scale(1.1);
+    }
+    
+    .enter-button:hover {
+        transform: scale(1.02);
+    }
+}
+
+/* ========================================
+   Print Styles
+   ======================================== */
+@media print {
+    .top-nav,
+    .chip-bank,
+    .controls-info {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .table-container {
+        border-color: #000;
+    }
+}
+
