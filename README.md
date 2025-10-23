@@ -459,13 +459,13 @@ No build process or dependencies required - it's pure HTML/CSS!
 - Responsive design verification
 - User experience evaluation
 - Bug reporting and tracking
-- Presentation support
+- Presentation engineering
 
 ---
 
 ## 📄 License
 
-This project was created as a student assignment for CSC 4370/6370 Web Programming at [University Name], Fall 2025.
+This project was created as a student assignment for CSC 4370/6370 Web Programming at GSU, Fall 2025.
 
 ---
 
